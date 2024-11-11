@@ -1,6 +1,4 @@
-import Link from "next/link";
-import DiscordSignIn from "~/components/discord-signin";
-import SignOut from "~/components/discord-signout";
+import SignOut from "~/components/signout";
 import GoogleSignin from "~/components/google-signin";
 import { auth } from "~/server/auth";
 
@@ -16,7 +14,6 @@ export default async function HomePage() {
                 </h1>
                 <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 md:gap-8">
                     {email && <p>{email}</p>}
-                    <DiscordSignIn></DiscordSignIn>
                     <GoogleSignin></GoogleSignin>
                     <SignOut></SignOut>
                 </div>
