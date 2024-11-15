@@ -1,0 +1,13 @@
+# The idea for this docker compose is for local testing only to create the production like ENV
+version: '3'
+services:
+  db:
+    image: mysql:latest
+    environment:
+      MYSQL_ROOT_PASSWORD: listlocal
+      MYSQL_DATABASE: listlocal
+      MYSQL_USER: listlocal
+      MYSQL_PASSWORD: listlocal
+    ports:
+      - "3306:3306"
+    restart: always
